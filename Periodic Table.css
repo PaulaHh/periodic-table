@@ -1,0 +1,273 @@
+body {
+    background-color: #101318;
+}
+
+/* hide the elements names when window size is less than 1500 pixels */
+@media screen and (max-width: 1500px) {
+    .name {
+        display: none;
+    }
+}
+
+/* hide the types of elements when window size is less than 1300 pixels */
+@media screen and (max-width: 1300px) {
+    .element-types {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .element-types {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 17.5px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-block-start: 4rem;
+    }
+}
+
+@media screen and (min-width: 800px){
+    /* this is the big table with 18 columns and 9 rows*/
+    .table {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: repeat(9, auto);
+        grid-gap: 5px;
+        flex: 1;
+    }
+    /* don't show the image if the window size is more than 800 pixels */
+    .image{
+        display: none;
+    }
+    /* select all divs inside the table */
+    .table>div {
+        height: 70px;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    .atomic-number{
+        font-size: medium;
+    }
+    .symbol{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .name{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 800px){
+    /* keep the 100% width at all times */
+    .image>img {
+        width: 100%;
+        flex: 1;
+        position: relative;
+        top: 10vh;
+    }
+    /* don't show the table when image is shown */
+    .table{
+        display: none;
+    }
+}
+
+/* override border style for empty cells */
+.no-border {
+    border: 0px !important;
+}
+
+.non-metal {
+    background-color: transparent;
+    border: 2px solid #52ee61;
+    color: #52ee61;
+    text-shadow: 0px 0px 1px #52ee61;
+    padding-top: 5px;
+}
+
+.alkaline-metal {
+    background-color: transparent;
+    border: 2px solid #eba816;
+    color: #eba816;
+    text-shadow: 0px 0px 1px #eba816;
+    padding-top: 5px;
+}
+
+.alkaline-earth-metal {
+    background-color: transparent;
+    border: 2px solid #dee955;
+    color: #dee955;
+    text-shadow: 0px 0px 1px #dee955;
+    padding-top: 5px;
+}
+
+.transition-metal {
+    background-color: transparent;
+    border: 2px solid #db9d51;
+    color: #db9d51;
+    text-shadow: 0px 0px 1px #db9d51;
+    padding-top: 5px;
+}
+
+.post-transition-metal {
+    background-color: transparent;
+    border: 2px solid #4cddf3;
+    color: #4cddf3;
+    text-shadow: 0px 0px 1px #4cddf3;
+    padding-top: 5px;
+}
+
+.metalloid {
+    background-color: transparent;
+    border: 2px solid #3aefb6;
+    color: #3aefb6;
+    text-shadow: 0px 0px 1px #3aefb6;
+    padding-top: 5px;
+}
+
+.halogen {
+    background-color: transparent;
+    border: 2px solid #ffffbc;
+    color: #ffffbc;
+    text-shadow: 0px 0px 1px #ffffbc;
+    padding-top: 5px;
+}
+
+.noble-gas {
+    background-color: transparent;
+    border: 2px solid #759fff;
+    color: #759fff;
+    text-shadow: 0px 0px 1px #759fff;
+    padding-top: 5px;
+}
+
+.lanthanide {
+    background-color: transparent;
+    border: 2px solid #ec77a3;
+    color: #ec77a3;
+    text-shadow: 0px 0px 1px #ec77a3;
+    padding-top: 5px;
+}
+
+.actinide {
+    background-color: transparent;
+    border: 2px solid #c686cc;
+    color: #c686cc;
+    text-shadow: 0px 0px 1px #c686cc;
+    padding-top: 5px;
+}
+
+/* class selector to center the elements */
+.center {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+}
+
+.actinide:hover, .alkaline-earth-metal:hover, .alkaline-metal:hover, .lanthanide:hover, 
+.metalloid:hover,.noble-gas:hover, .non-metal:hover, .post-transition-metal:hover, 
+.transition-metal:hover, .halogen:hover {
+    box-shadow: 0 0 5px 1px lightcyan;
+}
+
+.title {
+    color: #ffffbc;
+    text-align: center;
+    position: relative;
+    top: 4vh;
+    font-size: 1.2em;
+}
+
+#type1 {
+    color: #eba816;
+}
+
+#type2 {
+    color: #dee955;
+}
+
+#type3 {
+    color: #ec77a3;
+}
+
+#type4 {
+    color: #c686cc;
+}
+
+#type5 {
+    color: #db9d51;
+}
+
+#type6 {
+    color: #4cddf3;
+}
+
+#type7 {
+    color: #3aefb6;
+}
+
+#type8 {
+    color: #52ee61;
+}
+
+#type9 {
+    color: #ffffbc;
+}
+
+#type10 {
+    color: #759fff;
+}
+
+#type1:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #eba816;
+}
+
+#type2:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #dee955;
+}
+
+#type3:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #ec77a3;
+}
+
+#type4:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #c686cc;
+}
+
+#type5:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #db9d51;
+}
+
+#type6:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #4cddf3;
+}
+
+#type7:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #3aefb6;
+}
+
+#type8:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #52ee61;
+}
+
+#type9:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #ffffbc;
+}
+
+#type10:hover {
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #759fff;
+}
